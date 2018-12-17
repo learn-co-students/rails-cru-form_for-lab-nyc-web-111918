@@ -1,0 +1,8 @@
+<h1> Genre Index Page </h1>
+
+<% @genres.each do |genre| %>
+<%= link_to genre.name, genre_path(genre) %><br />
+<% end  %><br />
+
+<%= button_to "New", new_genre_path, :id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn tip", :method => :get %>
