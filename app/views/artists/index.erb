@@ -1,0 +1,21 @@
+<h1>All artists</h1>
+<ul>
+  <% @artists.each do |artist| %>
+    <li><%= link_to(artist.name, artist_path(artist)) %></li>
+    <ul>
+      <li><%= artist.bio %></li>
+      <li>Songs:</li>
+      <ul>
+        <% artist.songs.each do |song| %>
+          <li><%= link_to(song.name, song_path(song)) %></li>
+        <% end %>
+      </ul>
+      <li>Genres:</li>
+      <ul>
+        <% artist.genres.each do |genre| %>
+          <li><%= link_to(genre.name, genre_path(genre)) %></li>
+        <% end %>
+      </ul>
+    </ul>
+  <% end %>
+</ul>
