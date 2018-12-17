@@ -1,0 +1,9 @@
+<h1>Genre </h1>
+<h1> <%= @genre.name %> </h1><br />
+
+
+<%= button_to "Edit Genre", edit_genre_path, :id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn tip", :method => :get %>
+
+<%= button_to "Home", genres_path, :id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn tip", :method => :get %>
