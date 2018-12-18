@@ -1,0 +1,6 @@
+<h1>Artist Index Page</h1>
+
+<% @artists.each do |artist| %>
+  <label>Artist Name: </label><%= artist.name %>
+  <label>Artist Bio: </label><%= artist.bio %>
+<% end %>
