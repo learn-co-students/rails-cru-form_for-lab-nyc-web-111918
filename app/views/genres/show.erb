@@ -1,0 +1,7 @@
+<h1><%= @genre.name.capitalize %></h1>
+
+<% @songs.each do |song|%>
+
+<%= link_to song.name, song_path(song) %>, <br>
+
+<%end%>

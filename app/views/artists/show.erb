@@ -1,0 +1,14 @@
+<h1><%= @artist.name %></h1>
+
+<h2><%= @artist.bio %> </h2>
+
+Songs: <% @artist.songs.each do |s| %>
+<%= link_to s.name, song_path(s) %>,
+<% end %>
+<br>
+ Genres: 
+ <% @artist.genres.each do |s| %>
+
+	<%= s.name %>,
+<% end %>
+

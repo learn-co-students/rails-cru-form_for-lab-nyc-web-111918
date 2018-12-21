@@ -1,7 +1,18 @@
 <h1>New Song</h1>
 
+<ul>
+	<% if @errors %>
+	<% @errors.each do |error| %>
+	<li> <%=error%> </li>
+		<%end%>
+		<%end%>
+
+</ul>
+
 <%= form_for @song do |f| %>
-	<%= f.text_field :name %>
+	New song name:<%= f.text_field :name %>
+	artist: <%= f.collection_select :artist_id, Artist.all, :id, :name %>
+	genre: <%= f.collection_select :genre_id, Genre.all, :id, :name %> 
 	<%= f.submit %>
 
 <%end%>
